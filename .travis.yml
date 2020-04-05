@@ -33,11 +33,11 @@ android:
     - extra-android-m2repository # for design library
     - addon-google_apis-google-19 # google play services
     - android-$ANDROID_EMU_API_LEVEL
-    - sys-img-$ANDROID_ABI-google_apis-$ANDROID_EMU_API_LEVEL
+  #  - sys-img-$ANDROID_ABI-google_apis-$ANDROID_EMU_API_LEVEL
 #    - sys-img-armeabi-v7a-android-19
 #    - sys-img-armeabi-v7a-android-21
   #  - sys-img-armeabi-v7a-addon-google_apis-google-$ANDROID_API_LEVEL
- #   - sys-img-armeabi-v7a-addon-google_apis-google-$EMULATOR_API_LEVEL
+    - sys-img-armeabi-v7a-addon-google_apis-google-$EMULATOR_API_LEVEL
   licenses:
     - 'android-sdk-preview-license-.+'
     - 'android-sdk-license-.+'
@@ -47,7 +47,7 @@ before_script:
   - ./gradlew dependencies || true # Adding because of the error missing components using SDK manager"
   - android list targets
  # - echo no | android create avd --force --name test --target 1 --abi $ANDROID_ABI    #Create AVD for given api
-  - echo no | android create avd --force -n test -t android-$ANDROID_EMU_API_LEVEL --abi google_apis/$ANDROID_ABI
+  - echo no | android create avd --force -n test -t android-$EMULATOR_API_LEVEL --abi google_apis/$ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &    #Start emulator
 script:
   - echo "Travis branch is $TRAVIS_BRANCH"    #Print out which branch it is.
