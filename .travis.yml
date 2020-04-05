@@ -41,7 +41,7 @@ before_script:
   - chmod +x gradlew
   - ./gradlew dependencies || true # Adding because of the error missing components using SDK manager"
   - android list targets
-  - echo no | android create avd --force --name test --target 1 --abi $ANDROID_ABI    #Create AVD for given api
+  - echo no | android create avd --force --name test --target 1    #Create AVD for given api
   - emulator -avd test -no-skin -no-audio -no-window &    #Start emulator
 script:
   - echo "Travis branch is $TRAVIS_BRANCH"    #Print out which branch it is.
