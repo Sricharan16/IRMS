@@ -47,7 +47,8 @@ before_install:
 #  - adb shell input keyevent 82 &
 
 script:
-  - "./gradlew clean build connectedCheck -PdisablePreDex --stacktrace"
+ # - "./gradlew clean build connectedCheck -PdisablePreDex --stacktrace"
+  - ./gradlew build check
 #
 #before_deploy:
 #  - cp $TRAVIS_BUILD_DIR/example_keystore.jks $HOME
