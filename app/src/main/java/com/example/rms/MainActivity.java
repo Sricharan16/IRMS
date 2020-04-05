@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("message");
 
         myRef.setValue("Hello, World!");
+        //Adding comment to check
         btnSignIn=(Button)findViewById(R.id.btnSignIn);
                 btnSignUp=(Button)findViewById(R.id.btnSignUp);
                 txtSlogan=(TextView)findViewById(R.id.txtSlogan);
