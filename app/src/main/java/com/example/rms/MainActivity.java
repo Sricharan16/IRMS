@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         myRef.setValue("Hello, World!");
         //Adding comment to check
+        //second comment
         btnSignIn=(Button)findViewById(R.id.btnSignIn);
                 btnSignUp=(Button)findViewById(R.id.btnSignUp);
                 txtSlogan=(TextView)findViewById(R.id.txtSlogan);
